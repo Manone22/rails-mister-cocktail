@@ -1,5 +1,16 @@
-<h1>New Cocktail</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+      <h1> Add new cocktail</h1>
+        <%= simple_form_for (@cocktail) do |f| %>
+        <%= f.input :name %>
+        <%= f.submit "Submit", class: 'btn btn-primary' %>
+        <% end %>
+        <br>
+      <%= link_to 'Go back', cocktails_path, class: 'btn btn-warning btn-sm' %>
+    </div>
+  </div>
+</div>
 
-<%= render 'form', cocktail: @cocktail %>
 
-<%= link_to 'Back', cocktail_path %>
+
